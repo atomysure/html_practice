@@ -5,7 +5,7 @@
 function calc() {
   var w = document.getElementById("weight").value;
   var h = document.getElementById("height").value;
-  var r = W / (h * h); // BMI指数=体重(kg) ÷ (身長(m) X 身長(m))
+  var r = w / (h * h); // BMI指数=体重(kg) ÷ (身長(m) X 身長(m))
   document.getElementById("result").textContent = "あなたのBMIは" + r + "です。";
 
 }
