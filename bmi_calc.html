@@ -7,8 +7,18 @@ function calc() {
   var h = document.getElementById("height").value;
   var r = w / (h * h); // BMI指数=体重(kg) ÷ (身長(m) X 身長(m))
   document.getElementById("result").textContent = "あなたのBMIは" + r + "です。";
-
+  var str ="";
+  if(r < 18.5){
+   str = "低体重";
+}else if(r < 25){
+  str = "ちょうどいい"
+}else{
+    str = "肥満";
+  }
+document.getElementById("rating").textContent = str;
 }
+
+
 
     </script>
   </head>
@@ -18,5 +28,6 @@ function calc() {
     身長(m) : <input id="height" /><br />
     計算: <button onclick="calc()">計算 </button>
     <p id="result"></p>
+    <p id="rating"></p>
   </body>
 </html>
